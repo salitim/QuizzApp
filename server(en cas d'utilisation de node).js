@@ -9,7 +9,7 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.get("/movie", function(req, res, next) {
+app.get("/données", function(req, res, next) {
   res.send(data);
 });
 
