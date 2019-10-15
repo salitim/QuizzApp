@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>QUIZZ CIME</title>
+	<style>
+		p,
+		label {
+			font: 1rem 'Fira Sans', sans-serif;
+		}
+
+		input {
+			margin: .4rem;
+		}
+	</style>
+</head>
+
+<body>
+
+	<form method="POST">
+		<div id="app">
+
+		</div>
+	</form>
+	<script src="données/questions.js"></script>
+	<script>
+		const app = document.getElementById("app");
+			
+		for (let index = 0; index <= 10; index++) {
+			let question = document.createElement('p');
+			question.appendChild(document.createTextNode(tabQuestion[index][0]));
+			app.appendChild(question);
+			for (let i = 1; i < 5; i++) {
+				let label = document.createElement('label')
+				label.htmlFor = "Q" + index;
+				label.appendChild(document.createTextNode(tabQuestion[index][i]));
+				let checkBox = document.createElement('input');
+				checkBox.type = "checkbox";
+				checkBox.id = "Q" + index;
+				checkBox.name = "Q" + index;
+				app.appendChild(checkBox);
+				app.appendChild(label);
+			}
+		}
+
+		const submit = document.createElement('button');
+		submit.type = "submit";
+		submit.appendChild(document.createTextNode('Envoyer mes réponses'));
+		app.appendChild(submit);
+
+	</script>
+</body>
+
+</html>
