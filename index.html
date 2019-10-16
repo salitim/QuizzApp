@@ -28,15 +28,39 @@
 	<script src="données/questions.js"></script>
 	<script>
 		const app = document.getElementById("app");
-			
+		console.log(Math.floor(Math.random() * 10));
+		// Genere un tableau aléatoire avec  des chiffres qui ne se repètent pas
+		function randomTab(array) {
+			var tmp, current, top = 4;
+			if (top) while (--top) {
+				current = Math.floor(Math.random() * (top + 1));
+				tmp = array[current];
+				array[current] = array[top];
+				array[top] = tmp;
+			}
+			return array;
+		}
+
+		let tab = [1, 2, 3, 4];
+		console.log(randomTab(tab));
+		//Boucle sur 10 questions
 		for (let index = 0; index <= 10; index++) {
+
 			let question = document.createElement('p');
 			question.appendChild(document.createTextNode(tabQuestion[index][0]));
 			app.appendChild(question);
-			for (let i = 1; i < 5; i++) {
+
+			randomTab(tab);
+			
+			//Boucle sur 4 question possibles
+			for (let i = 0; i <= 3; i++) {
+
+				console.log(i);
+
 				let label = document.createElement('label')
 				label.htmlFor = "Q" + index;
-				label.appendChild(document.createTextNode(tabQuestion[index][i]));
+				label.appendChild(document.createTextNode(tabQuestion[index][tab[i]
+				]));
 				let checkBox = document.createElement('input');
 				checkBox.type = "checkbox";
 				checkBox.id = "Q" + index;
@@ -50,6 +74,12 @@
 		submit.type = "submit";
 		submit.appendChild(document.createTextNode('Envoyer mes réponses'));
 		app.appendChild(submit);
+
+	</script>
+
+	<script>
+
+
 
 	</script>
 </body>
