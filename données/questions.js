@@ -1,5 +1,5 @@
 
-// ici ont peu editer les 10 questions
+// ici on peut editer les 10 questions
 
 const tabQuestion = [
 
