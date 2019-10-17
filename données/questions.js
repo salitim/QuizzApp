@@ -7,7 +7,7 @@ const tabQuestion = [
     //Question 1
     'Les dossiers typer avec la localisation \"/COLLEGES-PUBLICS/\" sont  à rediriger vers...',
     // réponse 1 
-    'PT INTER', 
+    'PT INTER',
     // réponse 2
     'SPIC SYST',
     // réponse 3
