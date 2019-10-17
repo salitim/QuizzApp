@@ -20,68 +20,19 @@
 
 <body>
 
-	<form method="POST">
+	<form method="POST" id="formQuizz" onsubmit="test()">
 		<div id="app">
 
 		</div>
+		<!--Ajouter d'autres question en html ou modifier le tableaux du fichier se trouvant dans le dossier '/données/questions.js' -->
+		<input type="submit" value="Valider les questions">
 	</form>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
 	<script src="données/questions.js"></script>
-	<script>
-		const app = document.getElementById("app");
-		console.log(Math.floor(Math.random() * 10));
-		// Genere un tableau aléatoire avec  des chiffres qui ne se repètent pas
-		function randomTab(array) {
-			var tmp, current, top = 4;
-			if (top) while (--top) {
-				current = Math.floor(Math.random() * (top + 1));
-				tmp = array[current];
-				array[current] = array[top];
-				array[top] = tmp;
-			}
-			return array;
-		}
-
-		let tab = [1, 2, 3, 4];
-		console.log(randomTab(tab));
-		//Boucle sur 10 questions
-		for (let index = 0; index <= 10; index++) {
-
-			let question = document.createElement('p');
-			question.appendChild(document.createTextNode(tabQuestion[index][0]));
-			app.appendChild(question);
-
-			randomTab(tab);
-			
-			//Boucle sur 4 question possibles
-			for (let i = 0; i <= 3; i++) {
-
-				console.log(i);
-
-				let label = document.createElement('label')
-				label.htmlFor = "Q" + index;
-				label.appendChild(document.createTextNode(tabQuestion[index][tab[i]
-				]));
-				let checkBox = document.createElement('input');
-				checkBox.type = "checkbox";
-				checkBox.id = "Q" + index;
-				checkBox.name = "Q" + index;
-				app.appendChild(checkBox);
-				app.appendChild(label);
-			}
-		}
-
-		const submit = document.createElement('button');
-		submit.type = "submit";
-		submit.appendChild(document.createTextNode('Envoyer mes réponses'));
-		app.appendChild(submit);
-
-	</script>
-
-	<script>
-
-
-
-	</script>
+	<script src="affichage/affichageQuestions.js"></script>
+    <script src="traitementRep/traitementReponse.js"></script>
 </body>
 
 </html>

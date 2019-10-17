@@ -1,5 +1,5 @@
 
-
+// ici ont peu editer les 10 questions
 
 const tabQuestion = [
 
@@ -13,7 +13,9 @@ const tabQuestion = [
     // réponse 3
     'prox',
     // réponse 4
-    'toudouuu'
+    'toudouuu',
+    //bonne réponse
+    'prox'
   ],
   [
 
@@ -21,7 +23,8 @@ const tabQuestion = [
     'toudouuu',
     'toudouuu',
     'toudouuu',
-    'toudouuu'
+    'prox',
+    'prox'
   ],
   [
 
@@ -29,7 +32,8 @@ const tabQuestion = [
     'toudouuu',
     'toudouuu',
     'toudouuu',
-    'toudouuu'
+    'prox',
+    'prox'
   ]
   ,
   [
@@ -38,7 +42,8 @@ const tabQuestion = [
     'toudouuu',
     'toudouuu',
     'toudouuu',
-    'toudouuu'
+    'prox',
+    'prox'
   ],
   [
 
@@ -46,7 +51,8 @@ const tabQuestion = [
     'toudouuu',
     'toudouuu',
     'toudouuu',
-    'toudouuu'
+    'prox',
+    'prox'
   ],
   [
 
@@ -54,7 +60,8 @@ const tabQuestion = [
     'toudouuu',
     'toudouuu',
     'toudouuu',
-    'toudouuu'
+    'prox',
+    'prox'
   ],
   [
 
@@ -62,7 +69,8 @@ const tabQuestion = [
     'toudouuu',
     'toudouuu',
     'toudouuu',
-    'toudouuu'
+    'prox',
+    'prox'
   ]
   ,
   [
@@ -71,7 +79,8 @@ const tabQuestion = [
     'toudouuu',
     'toudouuu',
     'toudouuu',
-    'toudouuu'
+    'prox',
+    'prox'
   ],
   [
 
@@ -79,7 +88,8 @@ const tabQuestion = [
     'toudouuu',
     'toudouuu',
     'toudouuu',
-    'toudouuu'
+    'prox',
+    'prox'
   ]
   ,
   [
@@ -88,7 +98,9 @@ const tabQuestion = [
     'toudouuu',
     'toudouuu',
     'toudouuu',
-    'toudouuu'
+    'prox',
+    'prox'
   ]
+
 
 ]
