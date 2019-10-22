@@ -1,3 +1,5 @@
+
+
 const app = document.getElementById("app");
 
 // Génere un tableau aléatoire avec  des chiffres qui ne se repètent pas
@@ -27,17 +29,27 @@ for (let index = 0; index <= 9; index++) {
     //Boucle sur 4 question possibles
     for (let i = 0; i <= 3; i++) {
         let label = document.createElement('label')
-        label.htmlFor = "Q" + index;
-        label.appendChild(document.createTextNode(tabQuestion[index][tab[i]
-        ]));
+        //label.htmlFor = "Q" + index;       
+        label.className = "btn btn-primary btn-sm container element-animation" + (i + 1);
+        label.style = 'margin:10px'
         let checkBox = document.createElement('input');
-        checkBox.type = "radio";
+        checkBox.type = "checkbox";
         checkBox.id = "Q" + index;
-        checkBox.name = "Q" + index;
+        checkBox.className = "input";
         checkBox.value = tabQuestion[index][tab[i]];
-        app.appendChild(checkBox);
+        let span = document.createElement('span');
+        span.className = "checkmark";
         app.appendChild(label);
+        span.appendChild(document.createTextNode(tabQuestion[index][tab[i]
+        ]));
+        label.appendChild(checkBox);
+        label.appendChild(span);
     }
+
 }
 
-
+//Attribue un nom unique pour chage balise input. Permettra la récupération serveur PHP
+for (let j = 0; j <= 39; j++) {
+    console.log(j);
+    document.querySelectorAll('input')[j].name = 'Q' + j;
+}
