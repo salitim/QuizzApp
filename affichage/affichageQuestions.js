@@ -23,7 +23,10 @@ for (let index = 0; index <= 9; index++) {
 
     question.appendChild(document.createTextNode(tabQuestion[index][0]));
     app.appendChild(question);
-
+    let reponse = document.createElement('p');
+    reponse.appendChild(document.createTextNode(tabQuestion[index][6]));
+    reponse.className = 'reponse';
+    app.appendChild(reponse);
     randomTab(tab);
 
     //Boucle sur 4 question possibles
@@ -39,6 +42,7 @@ for (let index = 0; index <= 9; index++) {
         checkBox.value = tabQuestion[index][tab[i]];
         let span = document.createElement('span');
         span.className = "checkmark";
+
         app.appendChild(label);
         span.appendChild(document.createTextNode(tabQuestion[index][tab[i]
         ]));
@@ -50,6 +54,7 @@ for (let index = 0; index <= 9; index++) {
 
 //Attribue un nom unique pour chage balise input. Permettra la récupération serveur PHP
 for (let j = 0; j <= 39; j++) {
-    console.log(j);
+
     document.querySelectorAll('input')[j].name = 'Q' + j;
 }
+

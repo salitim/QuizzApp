@@ -9,6 +9,22 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<style>
+		.modal-header {
+			box-shadow: 1px 1px 12px #555;
+		}
+
+		.reponse {
+			color: rgb(201, 0, 0);
+			border: 1px solid red;
+			background: rgb(250, 233, 233);
+			padding: 10px;
+			display: none;
+		}
+
+		button:active~.reponse {
+			display: static;
+		}
+
 		label.btn:hover {
 			padding: 15px;
 			border-radius: 10px;
@@ -30,11 +46,12 @@
 		p,
 		label {
 			font: 1rem 'Fira Sans', sans-serif;
+			margin-top: 20px;
 		}
 
 		label.btn {
-			padding: 18px 40px;
-			width: 40%;
+			padding: 18px;
+			width: 35%;
 			white-space: normal;
 			-webkit-transform: scale(1.0);
 			-moz-transform: scale(1.0);
@@ -155,8 +172,6 @@
 			}
 		}
 
-
-
 		.container {
 			padding-left: 35px;
 			margin-bottom: 12px;
@@ -172,23 +187,25 @@
 
 <body>
 
-
 	<header class="modal-header">
 		<h1 style="margin:auto">QUIZZ CIME</h1>
 	</header>
 
 	<div class="quizz container-fluid" id="quizz">
-		<form method="POST" id="formQuizz" onsubmit="test()">
+		<form method="POST" id="formQuizz">
 			<div id="app" class="container text-center">
 
 			</div>
 			<!--Ajouter d'autres question en html ou modifier le tableaux du fichier se trouvant dans le dossier '/données/questions.js' -->
-			<div class="text-center">
-				<button type="submit" value="Valider les questions" class="btn bg-info">Valider les questions</button>
+			<div class="text-center" id="validationRep">
+				<button type="submit" value="Valider les questions" class="btn bg-info text-white submit">Valider les
+					questions</button>
 			</div>
 		</form>
 	</div>
-
+	<script src="données/questions.js"></script>
+	<script src="affichage/affichageQuestions.js"></script>
+	<script src="traitementRep/traitementReponse.js"></script>
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
 		integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -197,9 +214,7 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
 		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
 		crossorigin="anonymous"></script>
-	<script src="données/questions.js"></script>
-	<script src="affichage/affichageQuestions.js"></script>
-	<script src="traitementRep/traitementReponse.js"></script>
+
 </body>
 
 </html>
