@@ -16,7 +16,7 @@ const tabQuestion = [
     'toudouuu',
     //bonne réponse
     'prox',
-    // explication
+    // explication de la réponse
     'les techniciens de proximité intervenient dans le secteur des collège et seulement sur le réseau pédagogique'
   ],
   [
