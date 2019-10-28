@@ -34,7 +34,7 @@
 
 		input:checked~span {
 			color: black;
-			background: rgb(89, 180, 255);
+			background: rgba(89, 180, 255, 0.329);
 			padding: 5%;
 			border-radius: 10px;
 		}
@@ -189,6 +189,12 @@
 
 	<header class="modal-header">
 		<h1 style="margin:auto">QUIZZ CIME</h1>
+		<div id="selectQuizz">
+			<button id="classique" onclick="displayClassiqueTab()" class="btn btn-primary btn-lg">Classique</button>
+			<button id="college"  onclick="displayCollegeTab()" class="btn btn-info">College</button>
+			<button id="reseau"  onclick="displayReseauTab()" class="btn btn-info">Réseau</button>
+			<button id="confirme"  onclick="displayConfirmeTab()" class="btn btn-info">Confirmé</button>
+		</div>
 	</header>
 
 	<div class="quizz container-fluid" id="quizz">
@@ -198,8 +204,8 @@
 			</div>
 			<!--Ajouter d'autres question en html ou modifier le tableaux du fichier se trouvant dans le dossier '/données/questions.js' -->
 			<div class="text-center" id="validationRep">
-				<button type="submit" value="Valider les questions" class="btn bg-info text-white submit">Valider les
-					questions</button>
+				<button type="submit" value="Valider les réponses" class="btn bg-info text-white submit">Valider les
+					réponses</button>
 			</div>
 			
 		</form>

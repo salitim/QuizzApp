@@ -26,7 +26,7 @@ function download_csv() {
     var hiddenElement = document.querySelector('a');
     hiddenElement.href = 'data:text/csv;charset=utf-8,' + encodeURI(csv);
     hiddenElement.target = '_blank';
-    hiddenElement.download = 'agent.csv';
+    hiddenElement.download = 'agent'+new Date()+'.csv';
     hiddenElement.click();
 }
 

@@ -2,6 +2,26 @@
 
 const app = document.getElementById("app");
 
+
+
+function displayClassiqueTab(){ 
+    tabQuestion = classiqueTab;
+
+}
+
+function displayCollegeTab(){
+    tabQuestion = collegeTab;
+}
+
+function displayReseauTab(){
+    tabQuestion = reseauTab;
+}
+
+function displayConfirmeTab(){
+    tabQuestion = confirmeTab;
+}
+
+
 // Génere un tableau aléatoire avec  des chiffres qui ne se repètent pas
 function randomTab(array) {
     var tmp, current, top = 4;
